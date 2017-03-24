@@ -2,7 +2,7 @@
 #coding:utf-8
 
 import urllib,json,redis
-k8s_pods_url = urllib.urlopen('http://182.92.64.19:8080/api/v1/pods/')
+k8s_pods_url = urllib.urlopen('http://IP/api/v1/pods/')
 r = redis.Redis(host='192.168.4.206')
 pods_info = json.load(k8s_pods_url)
 pods_num = range(len(pods_info['items']))
